@@ -5,13 +5,13 @@ def main():
 
     ans = input(ru_local.RESIDENT).lower()
     if ans == ru_local.Y:
-        #IVAN
+        # IVAN
 
-        #Insure benefits
+        # Insure benefits
         ans = float(input(ru_local.R_INSURE_BENEFITS))
         total_tax += ans * 0.13
 
-        #Gift
+        # Gift
         ans = input(ru_local.R_GIFT).lower()
         if ans == ru_local.Y:
             ans = float(input(ru_local.CADASTRAL_VALUE))
@@ -19,7 +19,7 @@ def main():
         else:
             pass
 
-        #Cars
+        # Cars
         ans = input(ru_local.CAR).lower()
         if ans == ru_local.Y:
             ans = float(input(ru_local.AMOUNT))
@@ -27,46 +27,50 @@ def main():
         else:
             pass
 
-        #CLC
+        # CLC
         ans = float(input(ru_local.R_CLC))
         if ans > 5_000_000:
             total_tax += 5_000_000 * 0.13 + (ans - 5_000_000) * 0.15
         else:
             total_tax += ans * 0.13
 
-        #Salary
+        # Salary
         ans = float(input(ru_local.SALARY))
         if ans > 5_000_000:
             total_tax += 5_000_000 * 0.13 + (ans - 5_000_000) * 0.15
         else:
             total_tax += ans * 0.13 
 
-        #Obligation percents
+        # Obligation percents
         ans = input(ru_local.R_OBL_PERCENT).lower()
         if ans == ru_local.Y:
             ans = input(ru_local.R_OBL_2007).lower()
             if ans == ru_local.Y:
+                ans = float(input(ru_local.AMOUNT))
                 total_tax += ans * 0.09
             else:
+                ans = float(input(ru_local.AMOUNT))
                 total_tax += ans * 0.13
         else:
             pass
         
-        #Securities
+        # Securities
         ans = input(ru_local.R_SECURITIES).lower()
         if ans == ru_local.Y:
+            ans = float(input(ru_local.AMOUNT))
             total_tax += ans * 0.3
         else:
             pass
 
-        #Realty
+        # Realty
         ans = input(ru_local.R_REALTY).lower()
         if ans == ru_local.Y:
+            ans = float(input(ru_local.AMOUNT))
             total_tax += ans * 0.13
         else:
             pass
 
-        #Prize summary
+        # Prize summary
         ans_float = float(input(ru_local.R_PRIZE_SUMM).lower())
         if ans_float >= 4000:
             ans = input(ru_local.R_PRIZE_SUMM_4K).lower()
