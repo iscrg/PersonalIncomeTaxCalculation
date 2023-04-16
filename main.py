@@ -79,4 +79,48 @@ def Dmitry():
         pass
 
 def Daniil():
-    pass
+    else:
+        ans = input(ru_local.NR_WHO).lower
+        if ans == ru_local.Y:
+            ans = float(input(ru_local.SALARY))
+            total_tax += ans * 0.13
+        else:
+            ans = input(ru_local.NR_HIRE_WORK).lower
+            if ans == ru_local.Y:
+                ans = float(input(ru_local.SALARY))
+                if ans <= 5_000_000:
+                    total_tax += ans * 0.13
+                else:
+                    total_tax += ans * 0.15
+            else:
+                ans = float(input(ru_local.SALARY))
+                total_tax += ans * 0.3
+
+        ans = float(input(ru_local.NR_PERC_CONTR))
+        total_tax += ans * 0.13
+
+        ans = input(ru_local.NR_GIFT).lower()
+        if ans == ru_local.Y:
+            ans = float(input(ru_local.NR_CADASTRAL_VALUE))
+            total_tax += ans * 0.3
+        
+        ans = float(input(ru_local.NR_PERC_STOCK))
+        total_tax += ans * 0.09
+
+        ans = float(input(ru_local.NR_DIV_INT))
+        total_tax += ans * 0.05
+
+        ans = float(input(ru_local.NR_DIV_RU))
+        total_tax += ans * 0.15
+
+        ans = input(ru_local.PROPERTY).lower()
+        if ans == ru_local.Y:
+            ans = float(input(ru_local.AMOUNT))
+            total_tax += ans * 0.3
+        else:
+            pass
+
+        ans = input(ru_local.CAR).lower() 
+        if ans == ru_local.Y:
+            ans = float(input(ru_local.CAR))
+            total_tax += ans * 0.3
