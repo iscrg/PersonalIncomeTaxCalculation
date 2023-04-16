@@ -83,11 +83,15 @@ def main():
             pass
 
     else:
+
+        # Privileges
         ans = input(ru_local.NR_WHO).lower
         if ans == ru_local.Y:
             ans = float(input(ru_local.SALARY))
             total_tax += ans * 0.13
         else:
+
+            # Work for hire
             ans = input(ru_local.NR_HIRE_WORK).lower
             if ans == ru_local.Y:
                 ans = float(input(ru_local.SALARY))
@@ -99,23 +103,29 @@ def main():
                 ans = float(input(ru_local.SALARY))
                 total_tax += ans * 0.3
 
+        # Interest on deposits
         ans = float(input(ru_local.NR_PERC_CONTR))
         total_tax += ans * 0.13
 
+        # Gift
         ans = input(ru_local.NR_GIFT).lower()
         if ans == ru_local.Y:
             ans = float(input(ru_local.NR_CADASTRAL_VALUE))
             total_tax += ans * 0.3
         
+        # Interest on stocks
         ans = float(input(ru_local.NR_PERC_STOCK))
         total_tax += ans * 0.09
 
+        # Dividends of international companies
         ans = float(input(ru_local.NR_DIV_INT))
         total_tax += ans * 0.05
 
+        # Dividends of Russian companies
         ans = float(input(ru_local.NR_DIV_RU))
         total_tax += ans * 0.15
 
+        # Property
         ans = input(ru_local.PROPERTY).lower()
         if ans == ru_local.Y:
             ans = float(input(ru_local.AMOUNT))
@@ -123,6 +133,7 @@ def main():
         else:
             pass
 
+        # Cars
         ans = input(ru_local.CAR).lower() 
         if ans == ru_local.Y:
             ans = float(input(ru_local.CAR))
