@@ -14,7 +14,7 @@ def main():
         #Gift
         ans = input(ru_local.R_GIFT).lower()
         if ans == ru_local.Y:
-            ans = float(ru_local.CADASTRAL_VALUE)
+            ans = float(input(ru_local.CADASTRAL_VALUE))
             total_tax += ans * 0.13
         else:
             pass
@@ -22,6 +22,7 @@ def main():
         #Cars
         ans = input(ru_local.CAR).lower()
         if ans == ru_local.Y:
+            ans = float(input(ru_local.AMOUNT))
             total_tax += ans * 0.13
         else:
             pass
@@ -122,6 +123,8 @@ def main():
         if ans == ru_local.Y:
             ans = float(input(ru_local.CAR))
             total_tax += ans * 0.3
+
+    print(total_tax)
 
 if __name__ == '__main__':
     main()
