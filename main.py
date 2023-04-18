@@ -5,7 +5,6 @@ def main():
 
     ans = input(ru_local.RESIDENT).lower()
     if ans == ru_local.Y:
-        # IVAN
 
         # Insure benefits
         ans = float(input(ru_local.R_INSURE_BENEFITS))
