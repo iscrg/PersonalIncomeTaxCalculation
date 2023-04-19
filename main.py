@@ -1,5 +1,13 @@
 import ru_local
 
+'''
+Title: Personal income tax calculation
+Group:
+Popov I. 60%
+Fedyakin D. 60%
+Fisher D. 65%
+'''
+
 def main():
     total_tax = 0
 
